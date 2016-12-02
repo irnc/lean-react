@@ -3,8 +3,12 @@ import './App.css';
 
 class App extends Component {
   render() {
+    const { children } = this.props;
+
     return (
-      <div className="App"></div>
+      <div className="App">
+        {children}
+      </div>
     );
   }
 }
