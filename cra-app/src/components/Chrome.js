@@ -4,6 +4,9 @@ import IconButton from 'material-ui/IconButton';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 import MenuDrawer from './MenuDrawer';
+import AppFloatingActionButton from './AppFloatingActionButton';
+
+import './Chrome.css';
 
 export default class Chrome extends Component {
   constructor(props) {
@@ -28,6 +31,9 @@ export default class Chrome extends Component {
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})} />
         {children}
+        <div className="floating-action">
+          <AppFloatingActionButton />
+        </div>
       </div>
     );
   }
