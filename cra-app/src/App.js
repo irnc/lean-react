@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { ThemeProvider } from './material-ui';
+import Chrome from './components/Chrome';
 
 class App extends Component {
   render() {
@@ -6,7 +8,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        {children}
+        <ThemeProvider>
+          <Chrome>
+            {children}
+          </Chrome>
+        </ThemeProvider>
       </div>
     );
   }
